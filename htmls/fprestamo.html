@@ -1,0 +1,50 @@
+<div><h2>Prestamo de Documentos</h2></div>
+
+<div id="formDatos">
+	<table align="center">
+    	<tr>
+    		<td>Prestamo N°</td>  
+			<td><input type="hidden" id="inpres"/><span id="npres"></span></td> 
+	    </tr>
+    	<tr>
+    		<td>Nombre</td>  
+			<td><input type="text" id="nombre" size="25"/></td> 
+	   </tr>
+	   <tr>
+		    <td>C.I.</td>
+    		<td><input type="text" id="ci" size="10" value="0"/></td>
+   		</tr>
+  		<tr>
+   			<td>Area</td>
+   			<td><input type="text" id="area" size="25"/></td>
+  		</tr>
+  		<tr>
+   			<td>Objeto de Prestamo</td>
+   			<td><input type="text" id="obj_pres" size="25"/></td>
+  		</tr>
+    </table>
+</div>
+
+<div><h2>Detalle de Prestamo</h2></div>
+
+<div id="BusquedaDocs">
+	<div id="mostrarBusqueda"><span>Buscar Documentos a Prestar</span></div>
+    <div>
+    	<div id="datosBusqueda">
+        	Numero de Documento:
+            <input type="text" id="texto" size="10"/>
+            <button id="botonBuscar">Buscar</button>
+        </div>
+        <div id="resultadoBusqueda">
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div id="DocPrestados"></div>
+
+<div id="divBotonPrestar">
+	<button id="botonPrestar">Realizar Prestamo</button>
+    <button id="botonCancelar">Cancelar</button>
+</div>

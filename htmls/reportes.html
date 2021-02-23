@@ -1,0 +1,137 @@
+<style type="text/css">
+.nmenu{
+	font-family:'Courier New'; 
+	font-size:12px; 
+	margin:8px 0px 0px 25px; 
+	font-weight:bold;
+}
+</style>
+<div id="Reportes">
+	<h2>Reportes</h2>
+	<div>
+    	<ul>
+			<li>
+            	<input type="radio" name="tiporep" value="list_docs"/>
+	    		<label>Listado de Documentos</label>
+    			<div id="pars_list_docs">
+                	<label>Tipo</label>
+                    	<select id="tipoDoc">
+                        	<!--<option value="1">Todos</option>-->
+                            <option value="PREVENTIVO">PREVENTIVOS</option>
+                            <option value="SIP">S.I.P.</option>
+                            <option value="SERVICIOS">SERVICIOS</option>
+				    <option value="ASAMBLEA">ASAMBLEA</option>
+                            <option value="TOMO">T. C-31 EGRESOS SIGMA</option>
+       			    <option value="TI">T. C-21 INGRESOS</option>
+				    <option value="TPDV">T. PLLAS. DESCARGO VIATICOS</option>
+				    <option value="TND">T. NOTA DE DEVITOS</option>
+				    <option value="SDV">T. S.I.P. DESCARGO VIATICOS</option>
+				    <option value="SPV">T. S.I.P. PAGO VIATICOS</option>
+				    <option value="SSEDEGES">T. SERV. SEDEGES</option>
+				    <option value="SSEDCAM">T. SERV. SEDCAM</option>
+				    <option value="SSEDES">T. SERV. SEDES</option>
+				    <option value="SSEDEDE">T. SERV. SEDEDE</option>
+				    <option value="SSEDUCA">T. SERV. SEDUCA</option>
+				    <option value="PPC">T. PLLAS. PERS. CONTRATO</option>
+				    <option value="PPR">T. PLLAS. PERS. REGULAR</option>
+				    <option value="SP">T. S.I.P. PEAJES</option>
+				    <option value="PECM">T. PAGO EFECTIVO CONTRATOS MENORES</option>
+				    <option value="PAPC">T. PLLA. ADIC. PERSONAL A CONTRATO</option>
+                        </select>
+                    <label>Gestion</label>
+                    	<select id="gestDoc">
+                        	<!--<option value="1">Todas</option>-->
+				    <option value="PREFECTURA 2007">PREFECTURA 2007</option>
+				    <option value="PREFECTURA 2008">PREFECTURA 2008</option>
+                            <option value="PREFECTURA 2009">PREFECTURA 2009</option>
+                            <option value="PREFECTURA 2010">PREFECTURA 2010</option>
+                            <option value="GOBIERNO 2010">GOBIERNO 2010</option>
+                            <option value="GOBIERNO 2011">GOBIERNO 2011</option>
+                            <option value="GOBIERNO 2012">GOBIERNO 2012</option>
+                            <option value="GOBIERNO 2013">GOBIERNO 2013</option>
+                            <option value="GOBIERNO 2014">GOBIERNO 2014</option>
+			    <option value="GOBIERNO 2017">GOBIERNO 2017</option>
+ 			    <option value="GOBIERNO 2018">GOBIERNO 2018</option>
+<option value="GOBIERNO 2019">GOBIERNO 2019</option>
+                        </select>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+                    <label>Ordenar por: </label>
+                        <input type="radio" name="ord" value="numdoc" checked="checked"/>
+                        <label>Numero de Doc.</label>
+                        <input type="radio" name="ord" value="nombre"/>
+                        <label>Nombre</label>
+                </div>
+            </li>    
+            <li>
+    			<input type="radio" name="tiporep" value="list_pres" checked="checked"/>
+	    		<label>Listado de Prestamos</label>
+	    		<!--<div id="pars_list_pres"></div>-->
+    	    </li>
+        	<li>
+    			<input type="radio" name="tiporep" value="list_detpres"/>
+			    <label>Detalle de Prestamo</label>
+    			<div id="pars_list_detpres">
+                	<label>Numero de Prestamo</label>
+                    <input type="text" id="np" size="7"/>
+                </div>	
+        	</li>
+            <!--------->
+            <li>
+    			<input type="radio" name="tiporep" value="doc_pres"/>
+			    <label>Buscar Documento Prestado</label>
+    			<div id="pars_doc_pres">
+                	<label>Numero de Documento</label>
+                    <input type="text" id="nd" size="7"/>
+                    
+                    <label>Tipo</label>
+                    	<select id="tipoDocPres">
+                            <option value="PREVENTIVO">PREVENTIVOS</option>
+                            <option value="SIP">S.I.P.</option>
+                            <option value="SERVICIOS">SERVICIOS</option>
+				    <option value="ASAMBLEA">ASAMBLEA</option>
+                            <option value="TOMO">T. C-31 EGRESOS SIGMA</option>
+       			    <option value="TI">T. C-21 INGRESOS</option>
+				    <option value="TPDV">T. PLLAS. DESCARGO VIATICOS</option>
+				    <option value="TND">T. NOTA DE DEVITOS</option>
+				    <option value="SDV">T. S.I.P. DESCARGO VIATICOS</option>
+				    <option value="SPV">T. S.I.P. PAGO VIATICOS</option>
+				    <option value="SSEDEGES">T. SERV. SEDEGES</option>
+				    <option value="SSEDCAM">T. SERV. SEDCAM</option>
+				    <option value="SSEDES">T. SERV. SEDES</option>
+				    <option value="SSEDEDE">T. SERV. SEDEDE</option>
+				    <option value="SSEDUCA">T. SERV. SEDUCA</option>
+				    <option value="PPC">T. PLLAS. PERS. CONTRATO</option>
+			          <option value="PPR">T. PLLAS. PERS. REGULAR</option>
+				    <option value="SP">T. S.I.P. PEAJES</option>
+				    <option value="PECM">T. PAGO EFECTIVO CONTRATOS MENORES</option>
+				    <option value="PAPC">T. PLLA. ADIC. PERSONAL A CONTRATO</option>                            
+				</select>
+                      
+                     <label>Gestion</label>
+                    	<select id="gestionDocPres">
+				    <option value="PREFECTURA 2007">PREFECTURA 2007</option>
+				    <option value="PREFECTURA 2008">PREFECTURA 2008</option>
+                            <option value="PREFECTURA 2009">PREFECTURA 2009</option>
+                            <option value="PREFECTURA 2010">PREFECTURA 2010</option>
+                            <option value="GOBERNACION 2010">GOBIERNO 2010</option>
+                            <option value="GOBERNACION 2011">GOBIERNO 2011</option>
+                            <option value="GOBERNACION 2012">GOBIERNO 2012</option>
+                            <option value="GOBERNACION 2013">GOBIERNO 2013</option>
+                            <option value="GOBERNACION 2013">GOBIERNO 2014</option>
+			    <option value="GOBIERNO 2017">GOBIERNO 2017</option>
+  				<option value="GOBIERNO 2018">GOBIERNO 2018</option>
+<option value="GOBIERNO 2019">GOBIERNO 2019</option>
+                        </select>
+                </div>	
+        	</li>
+            <!--modificado16012013-->
+            <li class="nmenu"><a style="text-decoration:none; color:inherit;" href="htmls/modificararchivos/documento.php" target="_new">Modificar Documento</a></li>
+		<li class="nmenu"><a style="text-decoration:none; color:inherit;" href="htmls/buscardocumento/buscardoc.php" target="_new">Buscar Documentos</a></li>
+            <li class="nmenu"><a style="text-decoration:none; color:inherit;" href="htmls/buscarprestamos/mdeudor.php" target="_new">Paz y Salvo</a></li>
+            <!--fin de modificado-->
+        </ul>    
+	</div>
+    <div id="divBotonPrestar">
+    	<button id="bMostrarRep">Mostrar Reporte</button>
+    </div>
+</div>

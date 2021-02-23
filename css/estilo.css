@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+
+#documento{
+	margin:0px auto;
+	width:980px;
+}
+#cabecera{
+	/*border:1px solid #000;*/
+	border-bottom: 2px solid #999;
+	background-image:url(banner.png);
+	background-repeat:no-repeat;
+	height:73px;	
+}
+#datos{
+	border:solid #000;
+	border-width:0px 0px 2px 0px;
+	text-align:right;
+	font-family:Arial;
+	font-size:12px;
+	padding:3px;
+}
+#datos span#cerrarS{
+	font-weight:bold;
+	color:#00F;
+	font-size:10px;
+}
+#datos span#cerrarS:hover{
+	color:#F00;
+	cursor:pointer;
+}
+
+#menu{
+	float:left;
+	width:150px;
+	height:380px;	
+}
+#menu div[id^="op_"]{
+	border:1px solid #666;
+	margin:3px;
+	padding:3px;
+	font-family:Arial;
+	font-size:12px;
+	color:#666;
+	background-color:#DDD;
+}
+#menu div[id^="op_"]:hover{
+	border:1px solid #DDD;
+	color:#DDD;
+	background-color:#666;
+	cursor:pointer;
+}
+
+#tReg{
+	padding:10px 0px 10px 20px;
+	font-family:"Courier New";
+	font-size:12px;
+	color:#333;	
+}
+
+#tReg:hover{
+	color:#090;
+	cursor:pointer;
+	font-weight:bold;	
+}
+
+#contenido{
+	border:1px solid #000;
+	border-width:0px 0px 0px 2px;
+	float:left;
+	width:826px;	
+}
+#contenido h2{	
+	font-family:Arial;
+	font-size:16px;
+	color:#666;
+	padding-left:30px;
+}
+#contenido table{	
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#666;
+}
+#contenido table input[type="text"]{	
+	border:1px solid #666;
+	/*font-family:"Courier New";*/
+	font-family:Arial;
+	font-size:14px;
+	color:#333;
+	/*text-transform:uppercase;*/
+}
+#contenido table select,#contenido table textarea{	
+	border:1px solid #666;
+	font-family:"Courier New";
+	font-size:12px;
+	color:#333;
+	padding:2px;
+}
+/****/
+/**para le prestamo*/
+/***/
+#contenido #npres{
+	font-family:Arial;
+	font-weight:bold;
+	font-size:15px;
+	color:#F00;
+}
+
+#contenido #BusquedaDocs #mostrarBusqueda{
+	margin:0px 5px 0px 5px;
+	padding:5px 20px 5px 0px;
+	font-family:Arial;
+	font-size:10px;
+	color:#00F;
+	text-align:right;
+}
+#contenido #BusquedaDocs #datosBusqueda{
+	background-color:#EFEFEF;
+	margin:0px 5px 0px 5px;
+	padding:5px 0px 5px 5px;
+	font-family:Arial;
+	font-size:11px;
+	color:#00F;
+}
+#contenido #BusquedaDocs #resultadoBusqueda{
+	margin:0px 5px 0px 5px;
+	padding:5px 0px 5px 5px;
+	text-align:center;	
+}
+#contenido #DocPrestados, #contenido #ResBusquedaPrestamo #datos{
+	text-align:center;
+}
+#contenido #BusquedaDocs #resultadoBusqueda table, #DocPrestados table, #ResBusquedaPrestamo table{
+	border:1px solid #999;
+	border-spacing:0px;	
+	border-collapse:collapse;
+	font-family:"Courier New";
+	font-size:11px;
+}
+#contenido #BusquedaDocs #resultadoBusqueda table th, #DocPrestados table th, #ResBusquedaPrestamo table th{
+	border:1px solid #999;
+	background-color:#EFEFEF;
+	font-weight:bold;
+}
+#contenido #BusquedaDocs #resultadoBusqueda table td, #DocPrestados table td, #ResBusquedaPrestamo table td{
+	padding:2px 4px 2px 4px; 
+	border:1px solid #999;
+}
+#contenido #BusquedaDocs #resultadoBusqueda table button, #DocPrestados table button, #ResBusquedaPrestamo table button {
+	font-family:"Courier New";
+	font-size:10px;
+}
+#contenido #BusquedaDocs #datosBusqueda input{
+	font-family:"Courier New";
+	border:1px solid #666;
+	font-size:11px;
+}
+#contenido #BusquedaDocs #mostrarBusqueda span:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+/****/
+/*devolucion*/
+/*****/
+#contenido #BusquedaPrestamo{
+	background-color:#EFEFEF;
+	margin:0px 5px 0px 5px;
+	padding:5px 0px 5px 5px;
+	font-family:Arial;
+	font-size:11px;
+	color:#00F;
+}
+#contenido #BusquedaPrestamo input{
+	font-family:"Courier New";
+	border:1px solid #666;
+	font-size:11px;
+}
+#contenido #divBotonPrestar{
+	margin:5px;
+	background-color:#CCC;
+	padding:10px 15px 10px 0px;
+	text-align:right;
+}
+/***/
+/*reportes*/
+/***/
+#contenido #Reportes input[type="radio"]{
+	cursor:pointer;
+}
+#contenido #Reportes ul{
+	list-style-type:none;
+}
+#contenido #Reportes ul li div{
+	border:1px solid #CCC;
+	padding:5px;
+}
+#contenido #Reportes ul li div select, #contenido #Reportes input[type="text"]{
+	border:1px solid #666;
+	padding:2px;
+	font-size:12px;
+	font-family:Courier New;
+}
+#contenido #Reportes label{
+	font-family:Courier New;
+	font-weight:bolder;
+	font-size:12px;
+}
+#pie{
+	clear:left;
+	border:solid #000;
+	border-width:2px 0px 0px 0px;
+	background-color:#DDD;
+	color:#666;
+	text-align:center;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px;		
+}
+/******/
+#acceso #etiqueta, #acceso tr[id="rotulo"] th{
+	border:1px solid #666;
+	margin:3px;
+	padding:3px;
+	font-family:Arial;
+	font-size:12px;
+	color:#666;
+	background-color:#DDD;
+}
+#acceso table input[type="text"],#acceso table input[type="password"]{
+	border:1px solid #666;
+	font-family:"Courier New";
+	font-size:12px;
+	color:#333;
+}
+/***clases*/
+/****/
+.sp_user{
+	font-weight:bold;
+	color:#900;
+}
+.s_activo{
+	text-decoration:underline;
+	color:#90C;
+}
+.error th{
+	font-family:Arial;
+	border:1px solid #F36;
+	background-color:#F30;
+	color:#FFF;
+	font-size:12px;
+	font-weight:bold;
+}
+.no_result{
+	font-family:Arial;
+	color:#0C0;
+}
