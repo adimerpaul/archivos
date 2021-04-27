@@ -21,5 +21,21 @@ if(isset($_POST["opcion"])){
 			
 			echo $doc->registrarDocumento($fecharegistro,$gestion,$tipo,$numero,$nombre_rs,$detalle,$importe,$doc_adj,$obs);
 		break;
+
+		case "2":
+			$doc = new Documento();
+			$iddoc = trim($_POST["iddocumento"]);
+			$gestion = trim($_POST["modgestion"]);
+			$tipo = trim($_POST["modtipo"]);	
+			$numero = trim($_POST["modnumero"]);	
+			$nombre_rs = trim($_POST["modnombre_rs"]);
+			$detalle = trim($_POST["moddetalle"]);	
+			$importe = trim($_POST["modimporte"]);	
+			$doc_adj = trim($_POST["moddoc_adj"]);	
+			$obs = trim($_POST["modobs"]);
+			
+			echo $doc->modificarDocumento($iddoc,$gestion,$tipo,$numero,$nombre_rs,$detalle,$importe,$doc_adj,$obs);
+		break;
+
 	}
 }

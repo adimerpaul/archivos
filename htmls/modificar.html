@@ -1,0 +1,81 @@
+﻿
+<div id="fmodificar_Documento">
+  <h2>Modificar de Documento</h2>
+  <!--<table align="center">-->
+  <table>
+    <tr>
+		<input type="hidden" name="iddocumento" id="iddocumento">
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gestion:</td>
+	 <td>
+ 	  <select id="modgestion" name='modgestion'>
+		<option value="GAMO 2008">GAMO 2008</option>
+		<option value="GAMO 2009">GAMO 2009</option>
+		<option value="GAMO 2010">GAMO 2010</option>
+		<option value="GAMO 2011">GAMO 2011</option>
+		<option value="GAMO 2012">GAMO 2012</option>
+		<option value="GAMO 2013">GAMO 2013</option>
+		<option value="GAMO 2014">GAMO 2014</option>
+		<option value="GAMO 2015">GAMO 2015</option>
+		<option value="GAMO 2016">GAMO 2016</option>
+		<option value="GAMO 2017">GAMO 2017</option>
+		<option value="GAMO 2018">GAMO 2018</option>
+		<option value="GAMO 2019">GAMO 2019</option>
+		<option value="GAMO 2020">GAMO 2020</option>
+		<option value="GAMO 2021">GAMO 2021</option>
+
+	  </select>
+	 </td>
+	</tr>
+	<tr>
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo de Documento:</td>
+	 <td>
+	  <select id="modtipo">
+			<option value="File">File</option>	
+			<option value="File Regular">File Regular</option>	
+			<option value="File Contrato">File Contrato</option>
+			<option value="Comprobantes de egreso">Comprobantes de egreso</option>
+			<option value="Comprobantes de caja">Comprobantes de caja</option>
+			<option value="Boletas de pago de inmuebles">Boletas de pago de inmuebles</option>
+			<option value="Boletas de pago de tasas por servicio">Boletas de pago de tasas por servicio</option>
+			<option value="Boletas de pago de patentes">Boletas de pago de patentes</option>
+			<option value="Ordenanazas">Ordenanazas</option>
+			<option value="Resoluciones">Resoluciones</option>
+			<option value="Decretos">Decretos</option>
+			<option value="Otros">Otros</option>
+			
+      </select>
+	 </td>
+	</tr>
+	<tr>
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nº:</td>
+	 <td><input id="modnumero" type="text" size="10" readonly/></td>
+	</tr>
+	<tr id="fila_nrs">
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre o Razon Social:</td>
+	 <td><input id="modnombre_rs" type="text" size="40" /></td>
+	</tr>
+	<tr id="fila_det">
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detalle:</td>
+	 <td><input id="moddetalle" type="text" size="80"/></td>
+	</tr>
+	<tr id="fila_imp">
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Importe:</td>
+	 <td><input id="modimporte" type="text" size="50" /></td>
+	</tr>
+	<tr>
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Documentos Adjuntos:</td>
+	 <td><input id="moddoc_adj" type="text" size="50"/></td>
+	</tr>
+	<tr>
+	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Observaciones:</td>
+	 <td><textarea id="modobs" cols="35" >Ninguna</textarea></td>
+	</tr>
+    <tr>
+       	<td colspan="2" align="center">
+        	<button id="btnModDoc">Modificar</button>
+            <button id="cancelModDoc">Cancelar</button>
+        </td>
+    </tr>
+   </table>
+</div>
+<script type="application/javascript" src="js/modifica.js"></script>

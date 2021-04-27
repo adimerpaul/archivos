@@ -12,7 +12,19 @@
 <script type="application/javascript" src="js/prestamo.js"></script>
 <script type="application/javascript" src="js/devolucion.js"></script>
 <script type="application/javascript" src="js/reportes.js"></script>
+<script type="application/javascript" src="js/listado.js"></script>
+<script type="application/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="application/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="application/javascript" src="js/jszip.min.js"></script>
+<script type="application/javascript" src="js/pdfmake.min.js"></script>
+<script type="application/javascript" src="js/vfs_fonts.js"></script>
+<script type="application/javascript" src="js/dataTables.buttons.min.js"></script>
+<script type="application/javascript" src="js/buttons.html5.min.js"></script>
+
 <link type="text/css" rel="stylesheet" href="css/estilo.css"/>
+<link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css"/>
+<link type="text/css" rel="stylesheet" href="css/buttons.dataTables.min.css"/>
+
 </head>
 <body>
   <div id="documento">
@@ -27,6 +39,8 @@
         <div id="op_2">Prestamo</div>
         <div id="op_3">Devolucion</div>
         <div id="op_4">Reportes</div>
+        <div id="op_5">Listado</div>
+        <div id="op_7">Reg Reporte</div>
     </div>
     <div id="contenido" style="height:500px auto;">
     	<?PHP 
@@ -43,6 +57,22 @@
 				case "4":
 					include "htmls/reportes.html";
 				break;
+				case "5":
+					include "htmls/listado.html";
+				break;
+				case "6":
+					{include "htmls/modificar.html";
+						?>
+						<script>
+							$("#iddocumento").val(<?php echo $_GET["id"];?>);
+							recuperar();
+						</script>
+						<?php					
+					}
+				break;
+				case "7":
+					include "htmls/reporte.html";
+					break;
 			}
 			//include "htmls/registro.html";
 		?>
@@ -50,6 +80,7 @@
     <div id="pie">Gobierno Autonomo Municipal de Oruro - Sistemas &copy; 2021 </div>
   </div>    
 </body>
+
 </html>
 <?PHP 
 	}

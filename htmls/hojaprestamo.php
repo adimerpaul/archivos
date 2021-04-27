@@ -114,6 +114,7 @@
      	$tabla .= "<th rowspan=\"2\" class=\"encabezado\">Gestion</th>";
      	$tabla .= "<th rowspan=\"2\" class=\"encabezado\">Nombre o Razon Social</th>";
 	 	$tabla .= "<th rowspan=\"2\" class=\"encabezado\">Documentos<br/>Adjuntos</th>";
+	 	$tabla .= "<th rowspan=\"2\" class=\"encabezado\">Observaciones</th>";
 	 	
 	 	$tabla .= "<th colspan=\"2\" class=\"encabezado\">Firma</th>";						
 		$tabla .= "</tr>";
@@ -130,6 +131,7 @@
 			$tabla .= "<td>".$detallePres[$i]["gestion"]."</td>";
 			$tabla .= "<td>".$detallePres[$i]["nomraz_social"]."</td>";
 			$tabla .= "<td>".$detallePres[$i]["doc_adj"]."</td>";
+			$tabla .= "<td>".$detallePres[$i]["observaciones"]."</td>";
 			
 			$tabla .= "<td></td>";
 			$tabla .= "<td></td>";

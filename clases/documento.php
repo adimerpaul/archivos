@@ -208,6 +208,47 @@ class Documento{
 		//return $consulta;	
 	}
 	
+	function modificarDocumento($iddoc,$gestion, $tipo, $numero, $nombre_rs, 
+		$detalle, $importe, $doc_adj, $obs){
+		//$con = mysql_connect("localhost","root","");
+		//mysql_select_db("archivos", $con);
+		$consulta = "UPDATE `archivos`.`documento` set
+					 `nomraz_social`='$nombre_rs',
+					 `detalle`='$detalle',
+					 `importe`=$importe, 
+					  `doc_adj`='$doc_adj',
+					  `observaciones`='$obs',
+					  `gestion`='$gestion',
+					  `tipo_documento`='$tipo'
+					  WHERE iddocumento=$iddoc";
+		$resultado = mysql_query($consulta);
+		if(!$resultado){
+			return 0;
+		}
+		else{
+			if(mysql_affected_rows()>0)
+				return 1;
+			else
+				return 0;
+		}
+		//return $consulta;	
+	}
+
+	function eliminarDocumento($iddoc){
+	//$con = mysql_connect("localhost","root","");
+	//mysql_select_db("archivos", $con);
+	$consulta = "DELETE FROM documento
+				  WHERE iddocumento=$idDoc";
+	$resultado = mysql_query($consulta);
+	if(!$resultado){
+		return 0;
+	}
+	else{
+			return 1;
+	}
+	//return $consulta;	
+}
+
 	function ActualizarEstadoDevolucionDoc($idDoc){
 		//$con = mysql_connect("localhost","root","");
 		//mysql_select_db("archivos", $con);
@@ -311,6 +352,117 @@ class Documento{
 			}
 		}
 	}
+
+	function listarDoc($tipo,$fecharegistro){
+		//$tipo=strtoupper($tipo);
+		$consulta = "SELECT iddocumento,num_documento, 
+					 tipo_documento, gestion, nomraz_social, doc_adj,
+					 observaciones
+					 FROM documento 
+					 WHERE tipo_documento = '$tipo'
+					 AND fecharegistro = '$fecharegistro'"
+					 ;
+		$resultado = mysql_query($consulta);
+		if(!$resultado){
+			return 0;
+		}
+		else{
+			if(!(mysql_num_rows($resultado) > 0)){
+				return 0;
+			}
+			else{
+				$i = 0;
+				while($row = mysql_fetch_array($resultado)){
+					$respuesta[$i]["iddocumento"] = $row["iddocumento"];
+					$respuesta[$i]["num_documento"] = $row["num_documento"];
+					$respuesta[$i]["tipo_documento"] = $row["tipo_documento"];
+					$respuesta[$i]["gestion"] = $row["gestion"];
+					$respuesta[$i]["nomraz_social"] = $row["nomraz_social"];
+					$respuesta[$i]["doc_adj"] = $row["doc_adj"];
+					$respuesta[$i]["observaciones"] = $row["observaciones"];
+					//$respuesta[$i]["estado_doc"] = $row["estado_doc"];
+					$i++; 
+				}
+				$respuesta["nfilas"] = $i;
+				 
+				return $respuesta;
+			}
+		}
+	}
+
+	function reporteFec($fecharegistro){
+		//$tipo=strtoupper($tipo);
+
+		if($fecharegistro=='0')
+		$consulta = "SELECT iddocumento,num_documento, 
+		tipo_documento, gestion, nomraz_social, doc_adj, fecharegistro,
+		observaciones
+		FROM documento";
+		else
+		$consulta = "SELECT iddocumento,num_documento, 
+					 tipo_documento, gestion, 
+					 nomraz_social, doc_adj,fecharegistro,
+					 observaciones
+					 FROM documento 
+					 WHERE  fecharegistro = '$fecharegistro'"
+					 ;
+		$resultado = mysql_query($consulta);
+		if(!$resultado){
+			return 0;
+		}
+		else{
+			if(!(mysql_num_rows($resultado) > 0)){
+				return 0;
+			}
+			else{
+				$i = 0;
+				while($row = mysql_fetch_array($resultado)){
+					$respuesta[$i]["iddocumento"] = $row["iddocumento"];
+					$respuesta[$i]["num_documento"] = $row["num_documento"];
+					$respuesta[$i]["tipo_documento"] = $row["tipo_documento"];
+					$respuesta[$i]["fecharegistro"] = $row["fecharegistro"];
+					$respuesta[$i]["gestion"] = $row["gestion"];
+					$respuesta[$i]["nomraz_social"] = $row["nomraz_social"];
+					$respuesta[$i]["doc_adj"] = $row["doc_adj"];
+					$respuesta[$i]["observaciones"] = $row["observaciones"];
+					//$respuesta[$i]["estado_doc"] = $row["estado_doc"];
+					$i++; 
+				}
+				$respuesta["nfilas"] = $i;
+				 
+				return $respuesta;
+			}
+		}
+	}
+
+	function verDoc($iddoc){
+		//$tipo=strtoupper($tipo);
+		$consulta = "SELECT iddocumento,num_documento, 
+		tipo_documento, gestion, nomraz_social, doc_adj,
+		detalle,importe,
+		observaciones
+					 FROM documento 
+					 WHERE iddocumento = $iddoc"
+					 ;
+		$resultado = mysql_query($consulta);
+		$i = 0;
+		while($row = mysql_fetch_array($resultado)){
+			$respuesta[$i]["iddocumento"] = $row["iddocumento"];
+			$respuesta[$i]["num_documento"] = $row["num_documento"];
+			$respuesta[$i]["tipo_documento"] = $row["tipo_documento"];
+			$respuesta[$i]["gestion"] = $row["gestion"];
+			$respuesta[$i]["detalle"] = $row["detalle"];
+			$respuesta[$i]["importe"] = $row["importe"];
+			$respuesta[$i]["nomraz_social"] = $row["nomraz_social"];
+			$respuesta[$i]["doc_adj"] = $row["doc_adj"];
+			$respuesta[$i]["observaciones"] = $row["observaciones"];
+			//$respuesta[$i]["estado_doc"] = $row["estado_doc"];
+			$i++; 
+		}
+		$respuesta["nfilas"] = $i;
+				return $respuesta;
+	}
+
 }
 
 ?>

@@ -1,30 +1,14 @@
 ﻿<!--<span id="tReg">Documento</span>-->
 <!--<span id="tReg">Tomo</span>-->
 
-<div id="fRegistro_Documento">
+<div id="fRegistro_Documento" name="fRegistro_Documento">
   <h2>Registro de Documento</h2>
   <!--<table align="center">-->
   <table>
     <tr>
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gestion:</td>
 	 <td>
- 	  <select id="gestion">
-	   <!--option value="PREFECTURA 2007">PREFECTURA 2007</option>
-	   <option value="PREFECTURA 2008">PREFECTURA 2008</option>
-	   <option value="PREFECTURA 2009">PREFECTURA 2009</option>
-   	   <option value="PREFECTURA 2010">PREFECTURA 2010</option>
-   	   <option value="GOBIERNO 2010">GOBIERNO 2010</option>
-   	   <option value="GOBIERNO 2011">GOBIERNO 2011</option>
-  	   <option value="GOBIERNO 2012">GOBIERNO 2012</option>
-           <option value="GOBIERNO 2013">GOBIERNO 2013</option>
-           <option value="GOBIERNO 2014">GOBIERNO 2014</option>
-           <option value="GOBIERNO 2015">GOBIERNO 2015</option>
-	   <option value="GOBIERNO 2016">GOBIERNO 2016</option>
-	   <option value="GOBIERNO 2017">GOBIERNO 2017</option>
-           <option value="GOBIERNO 2018">GOBIERNO 2018</option>
-           <option value="GOBIERNO 2019">GOBIERNO 2019</option>
-	   <option value="GOBIERNO 2020">GOBIERNO 2020</option>
-	   <option value="GOBIERNO 2020">GOBIERNO 2021</option-->
+ 	  <select id="gestion" name="gestion">
 		<option value="GAMO 2008">GAMO 2008</option>
 		<option value="GAMO 2009">GAMO 2009</option>
 		<option value="GAMO 2010">GAMO 2010</option>
@@ -46,7 +30,7 @@
 	<tr>
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tipo de Documento:</td>
 	 <td>
-	  <select id="tipo">
+	  <select id="tipo" name="tipo">
 	   <!--option value="PREVENTIVO">PREVENTIVO</option>
    	   <option value="SERVICIOS">SERVICIOS</option>
    	   <option value="SIP">S.I.P.</option>
@@ -72,6 +56,8 @@
 		<option value="CIERRE DE PADRON">CIERRE DE PADRON</option>
 		<option value="MODIFICACION DE PADRON">MODIFICACION DE PADRON</option-->
 			<option value="File">File</option>	
+			<option value="File Regular">File Regular</option>	
+			<option value="File Contrato">File Contrato</option>
 			<option value="Comprobantes de egreso">Comprobantes de egreso</option>
 			<option value="Comprobantes de caja">Comprobantes de caja</option>
 			<option value="Boletas de pago de inmuebles">Boletas de pago de inmuebles</option>
@@ -87,27 +73,27 @@
 	</tr>
 	<tr>
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nº:</td>
-	 <td><input id="numero" type="text" size="10"/></td>
+	 <td><input id="numero" name="numero" type="text" size="10"/></td>
 	</tr>
 	<tr id="fila_nrs">
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre o Razon Social:</td>
-	 <td><input id="nombre_rs" type="text" size="40" /></td>
+	 <td><input id="nombre_rs" name="nombre_rs" type="text" size="40" /></td>
 	</tr>
 	<tr id="fila_det">
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detalle:</td>
-	 <td><input id="detalle" type="text" size="80"/></td>
+	 <td><input id="detalle" name="detalle" type="text" size="80"/></td>
 	</tr>
 	<tr id="fila_imp">
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Importe:</td>
-	 <td><input id="importe" type="text" size="50" /></td>
+	 <td><input id="importe" name="importe" type="text" size="50" /></td>
 	</tr>
 	<tr>
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Documentos Adjuntos:</td>
-	 <td><input id="doc_adj" type="text" size="50"/></td>
+	 <td><input id="doc_adj" name="doc_adj" type="text" size="50"/></td>
 	</tr>
 	<tr>
 	 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Observaciones:</td>
-	 <td><textarea id="obs" cols="35" >Ninguna</textarea></td>
+	 <td><textarea id="obs" name="obs" cols="35" >Ninguna</textarea></td>
 	</tr>
     <tr>
        	<td colspan="2" align="center">

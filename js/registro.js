@@ -88,6 +88,7 @@ camposFormRegDocVacios = function(){
 	error = {std:true,texto:""};
 	$("#fRegistro_Documento input[type=text]").each(
 		function(){
+			console.log($(this).val());
 			if($.trim($(this).val()) == "" && $(this).is(":visible")){
 				switch($(this).attr("id")){
 					case "numero":		error.texto += "- Numero\n";break;
@@ -99,8 +100,11 @@ camposFormRegDocVacios = function(){
 			}
 		}
 	);
-	if($.trim($("#fRegistro_Documento textarea").val()) == "") error.texto += "- Obsevaciones\n";
+	console.log($("#obs").val());
+	if(($("#obs").val()) == "" || $("#obs").val() == null) 
+	error.texto += "- Obsevaciones\n";
 	
+
 	if($.trim(error.texto) != "")
 		error.std = true;
 	else
@@ -109,7 +113,10 @@ camposFormRegDocVacios = function(){
 	return error;	
 }
 RegistrarDocumento = function(){
+	console.log($('#obs').val());
+
 	formVacio = camposFormRegDocVacios();
+	//console.log(formVacio.std);
 	if(!formVacio.std){
 		$.post(
 			"phps/fregistro.php",
@@ -121,7 +128,7 @@ RegistrarDocumento = function(){
 			 "detalle":		$("#fRegistro_Documento input[id=\"detalle\"]").val(),
 			 "importe":		$("#fRegistro_Documento input[id=\"importe\"]").val(),
 			 "doc_adj":		$("#fRegistro_Documento input[id=\"doc_adj\"]").val(),
-			 "obs":			$("#fRegistro_Documento textarea[id=\"obs\"]").val()
+			 "obs":			$("#fRegistro_Documento textarea[id=\"obs\"]").val(),
 			},
 			function(data){
 				if(data == "1"){

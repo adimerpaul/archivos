@@ -33,7 +33,9 @@ class Prestamo{
 	/***/
 	function DetallePrestamo($numero){
 		
-		$consulta = "SELECT d.iddocumento, d.num_documento, d.tipo_documento, d.gestion, d.nomraz_social, d.doc_adj, d.estado_doc
+		$consulta = "SELECT d.iddocumento, d.num_documento, 
+					d.tipo_documento, d.gestion, d.nomraz_social, 
+					d.doc_adj,d.observaciones, d.estado_doc
 					 FROM detalleprestamo dp, documento d
 					 WHERE dp.iddoc = d.iddocumento
 					 AND dp.idprestamo = '".$numero."'";			 
@@ -56,6 +58,7 @@ class Prestamo{
 					$respuesta[$i]["nomraz_social"] = $row["nomraz_social"];
 					$respuesta[$i]["doc_adj"] = $row["doc_adj"];
 					$respuesta[$i]["estado_doc"] = $row["estado_doc"];
+					$respuesta[$i]["observaciones"] = $row["observaciones"];
 					
 					$i++; 
 				}

@@ -18,6 +18,12 @@ $(document).ready(
 					case "op_4":
 						window.location.href = "prestamo.php?op=4";
 					break;
+					case "op_5":
+						window.location.href = "prestamo.php?op=5";
+					break;
+					case "op_7":
+						window.location.href = "prestamo.php?op=7";
+					break;
 					default:break;
 				}
 			}

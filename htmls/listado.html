@@ -1,0 +1,29 @@
+<div id='listado'>
+    <h3>LISTADO DE DOCUMENTOS</h3>
+    <div id="buscarlista">
+    	<label>Tipo de Documento: </label>
+        <select name="tipo" id="tipo">
+            <option value="File">File</option>	
+			<option value="File Regular">File Regular</option>	
+			<option value="File Contrato">File Contrato</option>
+			<option value="Comprobantes de egreso">Comprobantes de egreso</option>
+			<option value="Comprobantes de caja">Comprobantes de caja</option>
+			<option value="Boletas de pago de inmuebles">Boletas de pago de inmuebles</option>
+			<option value="Boletas de pago de tasas por servicio">Boletas de pago de tasas por servicio</option>
+			<option value="Boletas de pago de patentes">Boletas de pago de patentes</option>
+			<option value="Ordenanazas">Ordenanazas</option>
+			<option value="Resoluciones">Resoluciones</option>
+			<option value="Decretos">Decretos</option>
+			<option value="Otros">Otros</option>
+        </select>
+        <label for="">Fecha de Ingreso</label>
+        <input type="date" name="listfechareg" id="listfechareg" >
+        <button id="buscarDocumento" name="buscarDocumento">Buscar</button>
+    </div>
+    <br />
+    <div id="ResListado"> 
+    	<div id="datos" style="border:0px"></div>
+        <br />
+        <div id="detalle" style="border:0px"></div>
+    </div>
+</div>
