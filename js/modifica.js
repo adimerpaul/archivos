@@ -129,6 +129,7 @@ camposFormRegDocVacios = function(){
 	return error;	
 }
 ModificarDocumento = function(){
+	console.log($("#modnumero").val());
 	formVacio = camposFormRegDocVacios();
 	if(!formVacio.std){
 		$.post(

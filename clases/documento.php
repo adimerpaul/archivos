@@ -213,6 +213,7 @@ class Documento{
 		//$con = mysql_connect("localhost","root","");
 		//mysql_select_db("archivos", $con);
 		$consulta = "UPDATE `archivos`.`documento` set
+					`num_documento`='$numero',
 					 `nomraz_social`='$nombre_rs',
 					 `detalle`='$detalle',
 					 `importe`=$importe, 
