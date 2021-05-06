@@ -391,21 +391,22 @@ class Documento{
 		}
 	}
 
-	function reporteFec($fecharegistro){
+	function reporteFec($fecharegistro,$gestion){
 		//$tipo=strtoupper($tipo);
 
 		if($fecharegistro=='0')
 		$consulta = "SELECT iddocumento,num_documento, 
 		tipo_documento, gestion, nomraz_social, doc_adj, fecharegistro,
 		observaciones
-		FROM documento";
+		FROM documento where gestion ='$gestion'" ;
 		else
 		$consulta = "SELECT iddocumento,num_documento, 
 					 tipo_documento, gestion, 
 					 nomraz_social, doc_adj,fecharegistro,
 					 observaciones
 					 FROM documento 
-					 WHERE  fecharegistro = '$fecharegistro'"
+					 WHERE  fecharegistro = '$fecharegistro'
+					 and gestion='$gestion'"
 					 ;
 		$resultado = mysql_query($consulta);
 		if(!$resultado){

@@ -11,7 +11,7 @@ if(isset($_POST["opcion"])){
 		case "1":
 			//echo "hola munod este es ".$_POST["numero"];
 			$pres = new Documento();
-			$datosPres = $pres->reporteFec($_POST["listfechareg"]);
+			$datosPres = $pres->reporteFec($_POST["listfechareg"],$_POST["listgestion"]);
 			//echo $_POST["numero"]." ".$_POST["opcion"];
 			$i=0;
 			if($datosPres != "0"){
