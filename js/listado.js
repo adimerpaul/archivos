@@ -40,11 +40,12 @@ $.post(
 $('#RepfecDocumento').click(function(){
     /****/
     console.log($("#listfechareg").val());
+    console.log($("#listgestion").val());
 $.post(
     "phps/freporte.php",
     {"opcion" : "1",
      "listfechareg" : $("#listfechareg").val(),
-     "listgestion":$('#listgestion').val(),
+     "listgestion" : $("#listgestion").val(),
     },
     function(data){
         if(data!='0')
@@ -62,7 +63,7 @@ $.post(
         "phps/freporte.php",
         {"opcion" : "1",
          "listfechareg" : '0',
-         "listgestion":$('#listgestion').val(),
+         "listgestion" : $("#listgestion").val(),
         },
         function(data){
             if(data!='0')
