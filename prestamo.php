@@ -41,6 +41,7 @@
         <div id="op_4">Reportes</div>
         <div id="op_5">Listado</div>
         <div id="op_7">Reg Reporte</div>
+        <div id="op_8">Buscar Compro</div>
     </div>
     <div id="contenido" style="height:500px auto;">
     	<?PHP 
@@ -72,6 +73,9 @@
 				break;
 				case "7":
 					include "htmls/reporte.html";
+					break;
+				case "8":
+					include "htmls/buscar.html";
 					break;
 			}
 			//include "htmls/registro.html";

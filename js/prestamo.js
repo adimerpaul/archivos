@@ -24,6 +24,9 @@ $(document).ready(
 					case "op_7":
 						window.location.href = "prestamo.php?op=7";
 					break;
+					case "op_8":
+						window.location.href = "prestamo.php?op=8";
+					break;
 					default:break;
 				}
 			}
