@@ -218,8 +218,8 @@ class Documento{
 					 `detalle`='$detalle',
 					 `importe`=$importe, 
 					  `doc_adj`='$doc_adj',
-					  `ini`='$ini',
-					  `fin`='$fin',
+					  `ini`=$ini,
+					  `fin`=$fin,
 					  `observaciones`='$obs',
 					  `gestion`='$gestion',
 					  `tipo_documento`='$tipo'
