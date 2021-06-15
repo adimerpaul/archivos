@@ -31,6 +31,8 @@ recuperar=function(){
 				$("#moddetalle").val(row['detalle']);
 				$("#modimporte").val(row['importe']);
 				$("#moddoc_adj").val(row['doc_adj']);
+				$("#modini").val(row['ini']);
+				$("#modfin").val(row['fin']);
 				$("#modobs").val(row['observaciones']);
 			}
 			else
@@ -119,6 +121,8 @@ camposFormRegDocVacios = function(){
 			}
 		}
 	);
+	if(isNaN($('#modini').val())) error.texto+="- ini\n";
+	if(isNaN($('#modfin').val())) error.texto+="- fin\n";
 	if($.trim($("#fmodificar_Documento textarea").val()) == "") error.texto += "- Obsevaciones\n";
 	
 	if($.trim(error.texto) != "")
@@ -143,6 +147,8 @@ ModificarDocumento = function(){
 			 "moddetalle":		$("#fmodificar_Documento input[id=\"moddetalle\"]").val(),
 			 "modimporte":		$("#fmodificar_Documento input[id=\"modimporte\"]").val(),
 			 "moddoc_adj":		$("#fmodificar_Documento input[id=\"moddoc_adj\"]").val(),
+			 "modini":			$("#fmodificar_Documento input[id=\"modini\"]").val(),
+			 "modfin":			$("#fmodificar_Documento input[id=\"modfin\"]").val(),
 			 "modobs":			$("#fmodificar_Documento textarea[id=\"modobs\"]").val()
 			},
 			function(data){

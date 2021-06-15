@@ -209,7 +209,7 @@ class Documento{
 	}
 	
 	function modificarDocumento($iddoc,$gestion, $tipo, $numero, $nombre_rs, 
-		$detalle, $importe, $doc_adj, $obs){
+		$detalle, $importe, $doc_adj, $ini, $fin, $obs){
 		//$con = mysql_connect("localhost","root","");
 		//mysql_select_db("archivos", $con);
 		$consulta = "UPDATE `archivos`.`documento` set
@@ -218,6 +218,8 @@ class Documento{
 					 `detalle`='$detalle',
 					 `importe`=$importe, 
 					  `doc_adj`='$doc_adj',
+					  `ini`='$ini',
+					  `fin`='$fin',
 					  `observaciones`='$obs',
 					  `gestion`='$gestion',
 					  `tipo_documento`='$tipo'

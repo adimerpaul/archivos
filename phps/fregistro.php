@@ -33,10 +33,12 @@ if(isset($_POST["opcion"])){
 			$nombre_rs = trim($_POST["modnombre_rs"]);
 			$detalle = trim($_POST["moddetalle"]);	
 			$importe = trim($_POST["modimporte"]);	
-			$doc_adj = trim($_POST["moddoc_adj"]);	
+			$doc_adj = trim($_POST["moddoc_adj"]);		
+			$ini = trim($_POST["modini"]);		
+			$fin = trim($_POST["modfin"]);		
 			$obs = trim($_POST["modobs"]);
 			
-			echo $doc->modificarDocumento($iddoc,$gestion,$tipo,$numero,$nombre_rs,$detalle,$importe,$doc_adj,$obs);
+			echo $doc->modificarDocumento($iddoc,$gestion,$tipo,$numero,$nombre_rs,$detalle,$importe,$doc_adj,$ini,$fin,$obs);
 		break;
 
 	}
