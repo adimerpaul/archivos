@@ -44,16 +44,14 @@ $('#buscarcomp').click(function(){
         "phps/flistado.php",
         {"opcion" : "3",
          "comprobante" : $("#comprobante").val()
-        },
-        function(data){
+        },function(data){
             if(data!='0')
                 $("#Rescomprobante #detalle").html(data+"<br/>");
             else
                 $("#Rescomprobante #detalle").html('no existen registros'+"<br/>");
             
-        }
-        )
         })
+})
 
 $('#RepfecDocumento').click(function(){
     /****/
