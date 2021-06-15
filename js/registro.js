@@ -100,6 +100,10 @@ camposFormRegDocVacios = function(){
 			}
 		}
 	);
+	if($("#ini").val()!="" || $("#ini").val()!=null || isNaN($("#ini").val()))
+		error.texto += "- Ini\n";
+	if($("#fin").val()!="" || $("#fin").val()!=null || isNaN($("#fin").val()))
+		error.texto += "- Fin\n";
 	console.log($("#obs").val());
 	if(($("#obs").val()) == "" || $("#obs").val() == null) 
 	error.texto += "- Obsevaciones\n";
@@ -128,6 +132,8 @@ RegistrarDocumento = function(){
 			 "detalle":		$("#fRegistro_Documento input[id=\"detalle\"]").val(),
 			 "importe":		$("#fRegistro_Documento input[id=\"importe\"]").val(),
 			 "doc_adj":		$("#fRegistro_Documento input[id=\"doc_adj\"]").val(),
+			 "ini":	   		$("#fRegistro_Documento input[id=\"ini\"]").val(),
+			 "fin":			$("#fRegistro_Documento input[id=\"fin\"]").val(),
 			 "obs":			$("#fRegistro_Documento textarea[id=\"obs\"]").val(),
 			},
 			function(data){

@@ -187,14 +187,14 @@ class Documento{
 		}
 	}
 	
-	function registrarDocumento($fecharegistro,$gestion, $tipo, $numero, $nombre_rs, $detalle, $importe, $doc_adj, $obs){
+	function registrarDocumento($fecharegistro,$gestion, $tipo, $numero, $nombre_rs, $detalle, $importe, $doc_adj, $ini, $fin, $obs){
 		//$con = mysql_connect("localhost","root","");
 		//mysql_select_db("archivos", $con);
 		$consulta = "INSERT INTO `archivos`.`documento` 
 					 (`fecharegistro`,`num_documento`,`nomraz_social`,`detalle`,`importe`, 
-					  `doc_adj`,`observaciones`,`gestion`,`tipo_documento`,`estado_doc`)
+					  `doc_adj`,`ini`,`fin`,`observaciones`,`gestion`,`tipo_documento`,`estado_doc`)
 					 VALUES ('".$fecharegistro."', '".$numero."', '".$nombre_rs."', '".$detalle."', '".$importe."', 
-					 		 '".$doc_adj."', '".$obs."', '".$gestion."', '".$tipo."','0')";
+					 		 '".$doc_adj."','".$ini."','".$fin."', '".$obs."', '".$gestion."', '".$tipo."','0')";
 		$resultado = mysql_query($consulta);
 		if(!$resultado){
 			return 0;

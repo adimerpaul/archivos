@@ -17,9 +17,11 @@ if(isset($_POST["opcion"])){
 			$detalle = trim($_POST["detalle"]);	
 			$importe = trim($_POST["importe"]);	
 			$doc_adj = trim($_POST["doc_adj"]);	
+			$ini = trim($_POST["ini"]);	
+			$fin = trim($_POST["fin"]);	
 			$obs = trim($_POST["obs"]);
 			
-			echo $doc->registrarDocumento($fecharegistro,$gestion,$tipo,$numero,$nombre_rs,$detalle,$importe,$doc_adj,$obs);
+			echo $doc->registrarDocumento($fecharegistro,$gestion,$tipo,$numero,$nombre_rs,$detalle,$importe,$doc_adj,$ini,$fin,$obs);
 		break;
 
 		case "2":
