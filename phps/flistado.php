@@ -37,7 +37,7 @@ if(isset($_POST["opcion"])){
 				//$tabla .= "<td>".$detallePres[$i]["iddoc"]."</td>";
 				
 				//$tabla .= "<td>".$detallePres["iddocumento"]."</td>";
-				$tabla .= "<td>".$datosPres[$i]["num_documento"]."</td>";
+				$tabla .= "<td>Doc-".$datosPres[$i]["num_documento"]."</td>";
 				$tabla .= "<td>".$datosPres[$i]["tipo_documento"]."</td>";
 				$tabla .= "<td>".$datosPres[$i]["gestion"]."</td>";
 				$tabla .= "<td>".$datosPres[$i]["nomraz_social"]."</td>";
