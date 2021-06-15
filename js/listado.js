@@ -37,6 +37,24 @@ $.post(
     )
     })
 
+$('#buscarcomp').click(function(){
+        /****/
+        console.log($("#comprobante").val());
+    $.post(
+        "phps/flistado.php",
+        {"opcion" : "3",
+         "comprobante" : $("#comprobante").val()
+        },
+        function(data){
+            if(data!='0')
+                $("#Rescomprobante #detalle").html(data+"<br/>");
+            else
+                $("#Rescomprobante #detalle").html('no existen registros'+"<br/>");
+            
+        }
+        )
+        })
+
 $('#RepfecDocumento').click(function(){
     /****/
     console.log($("#listfechareg").val());

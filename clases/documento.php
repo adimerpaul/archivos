@@ -393,6 +393,42 @@ class Documento{
 		}
 	}
 
+	function listarComp($comprobante){
+		//$tipo=strtoupper($tipo);
+		$consulta = "SELECT iddocumento,num_documento, 
+					 tipo_documento, gestion, nomraz_social, doc_adj,
+					 observaciones
+					 FROM documento 
+					 WHERE ini <= $comprobante and fin >= $comprobante"					 
+					 ;
+		$resultado = mysql_query($consulta);
+		if(!$resultado){
+			return 0;
+		}
+		else{
+			if(!(mysql_num_rows($resultado) > 0)){
+				return 0;
+			}
+			else{
+				$i = 0;
+				while($row = mysql_fetch_array($resultado)){
+					$respuesta[$i]["iddocumento"] = $row["iddocumento"];
+					$respuesta[$i]["num_documento"] = $row["num_documento"];
+					$respuesta[$i]["tipo_documento"] = $row["tipo_documento"];
+					$respuesta[$i]["gestion"] = $row["gestion"];
+					$respuesta[$i]["nomraz_social"] = $row["nomraz_social"];
+					$respuesta[$i]["doc_adj"] = $row["doc_adj"];
+					$respuesta[$i]["observaciones"] = $row["observaciones"];
+					//$respuesta[$i]["estado_doc"] = $row["estado_doc"];
+					$i++; 
+				}
+				$respuesta["nfilas"] = $i;
+				 
+				return $respuesta;
+			}
+		}
+	}
+
 	function reporteFec($fecharegistro,$gestion){
 		//$tipo=strtoupper($tipo);
 
