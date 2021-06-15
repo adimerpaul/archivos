@@ -194,7 +194,7 @@ class Documento{
 					 (`fecharegistro`,`num_documento`,`nomraz_social`,`detalle`,`importe`, 
 					  `doc_adj`,`ini`,`fin`,`observaciones`,`gestion`,`tipo_documento`,`estado_doc`)
 					 VALUES ('".$fecharegistro."', '".$numero."', '".$nombre_rs."', '".$detalle."', '".$importe."', 
-					 		 '".$doc_adj."','".$ini."','".$fin."', '".$obs."', '".$gestion."', '".$tipo."','0')";
+					 		 '".$doc_adj."',".$ini.",".$fin.", '".$obs."', '".$gestion."', '".$tipo."','0')";
 		$resultado = mysql_query($consulta);
 		if(!$resultado){
 			return 0;

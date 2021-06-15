@@ -100,9 +100,9 @@ camposFormRegDocVacios = function(){
 			}
 		}
 	);
-	if($("#ini").val()!="" || $("#ini").val()!=null || isNaN($("#ini").val()))
+	if($("#ini").val()!="0" || isNaN($("#ini").val()))
 		error.texto += "- Ini\n";
-	if($("#fin").val()!="" || $("#fin").val()!=null || isNaN($("#fin").val()))
+	if($("#fin").val()!="0" || isNaN($("#fin").val()))
 		error.texto += "- Fin\n";
 	console.log($("#obs").val());
 	if(($("#obs").val()) == "" || $("#obs").val() == null) 
