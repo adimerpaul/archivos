@@ -442,7 +442,7 @@ class Documento{
 	function verDoc($iddoc){
 		//$tipo=strtoupper($tipo);
 		$consulta = "SELECT iddocumento,num_documento, 
-		tipo_documento, gestion, nomraz_social, doc_adj,
+		tipo_documento, gestion, nomraz_social, doc_adj, ini,fin,
 		detalle,importe,
 		observaciones
 					 FROM documento 
@@ -459,6 +459,8 @@ class Documento{
 			$respuesta[$i]["importe"] = $row["importe"];
 			$respuesta[$i]["nomraz_social"] = $row["nomraz_social"];
 			$respuesta[$i]["doc_adj"] = $row["doc_adj"];
+			$respuesta[$i]["ini"] = $row["ini"];
+			$respuesta[$i]["fin"] = $row["fin"];
 			$respuesta[$i]["observaciones"] = $row["observaciones"];
 			//$respuesta[$i]["estado_doc"] = $row["estado_doc"];
 			$i++; 
