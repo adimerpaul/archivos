@@ -76,6 +76,14 @@ if(isset($_POST["opcion"])){
 				echo '0';
 			}
 			break; 
+			case "2":
+				$docmen = new Documento();
+				$id=$_POST['iddoc'];
+				$datosdoc = $docmen->verDoc($id);
+				if ($datosdoc == 0) echo '0';
+				else
+				echo json_encode($datosdoc[0]);
+				break;	
 		case "3":
 				//echo "hola munod este es ".$_POST["numero"];
 				$pres = new Documento();
