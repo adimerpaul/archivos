@@ -82,7 +82,7 @@ if(isset($_POST["opcion"])){
 				$datosdoc = $docmen->verDoc($id);
 				if ($datosdoc == 0) echo '0';
 				else
-				echo ($datosdoc[0]);
+				echo json_encode($datosdoc[0]);
 				break;	
 		case "3":
 				//echo "hola munod este es ".$_POST["numero"];
