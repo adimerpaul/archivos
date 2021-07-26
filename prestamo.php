@@ -20,6 +20,7 @@
 <script type="application/javascript" src="js/vfs_fonts.js"></script>
 <script type="application/javascript" src="js/dataTables.buttons.min.js"></script>
 <script type="application/javascript" src="js/buttons.html5.min.js"></script>
+<script type="application/javascript" src="js/chart.js"></script>
 
 <link type="text/css" rel="stylesheet" href="css/estilo.css"/>
 <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css"/>
@@ -42,6 +43,7 @@
         <div id="op_5">Listado</div>
         <div id="op_7">Reg Reporte</div>
         <div id="op_8">Buscar Compro</div>
+        <div id="op_9">Resumen</div>
     </div>
     <div id="contenido" style="height:500px auto;">
     	<?PHP 
@@ -77,6 +79,12 @@
 				case "8":
 					include "htmls/buscar.html";
 					break;
+				case "9":
+					{include "htmls/resumen.html";
+					?>
+					<Script ></Script>
+					<?php
+					}
 			}
 			//include "htmls/registro.html";
 		?>
